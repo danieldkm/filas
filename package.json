@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=dev node server.js",
     "rabbit-consumer": "NODE_ENV=dev node server.js rabbit-consumer",
-    "rabbit-producer": "NODE_ENV=dev node server.js rabbit-producer"
+    "rabbit-producer": "NODE_ENV=dev node server.js rabbit-producer",
+    "mongodb": "NODE_ENV=dev node server.js mongodb"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "aws-sdk": "^2.574.0",
     "dotenv": "^8.2.0",
     "log4js": "^6.0.0",
+    "mongoose": "^5.7.11",
     "sqs-consumer": "^5.4.0"
   }
 }

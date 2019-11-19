@@ -49,6 +49,9 @@ const dev = {
         exchange: process.env.DEV_RABBITMQ_EXCHANGE,
         queue: process.env.DEV_RABBITMQ_QUEUE,
         key: process.env.DEV_RABBITMQ_KEY,
+    },
+    mongodb: {
+        url: process.env.MONGO_CONNECTION,
     }
 };
 

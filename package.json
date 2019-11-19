@@ -1,0 +1,29 @@
+{
+  "name": "filas",
+  "version": "1.0.0",
+  "description": "teste com fila",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=dev node server.js",
+    "rabbit-consumer": "NODE_ENV=dev node server.js rabbit-consumer",
+    "rabbit-producer": "NODE_ENV=dev node server.js rabbit-producer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danieldkm/filas.git"
+  },
+  "author": "Daniel K. Morita",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danieldkm/filas/issues"
+  },
+  "homepage": "https://github.com/danieldkm/filas#readme",
+  "dependencies": {
+    "amqplib": "^0.5.5",
+    "aws-sdk": "^2.574.0",
+    "dotenv": "^8.2.0",
+    "log4js": "^6.0.0",
+    "sqs-consumer": "^5.4.0"
+  }
+}

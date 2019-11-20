@@ -15,7 +15,8 @@ module.exports = {
                         }
                         channel.assertExchange(rabbit.exchange, 'topic', { durable: true });
                         channel.assertQueue(rabbit.queue, { durable: true });
-                        channel.publish(rabbit.exchange, rabbit.key, Buffer.from(JSON.stringify(payload)));
+                        channel.sendToQueue(rabbit.queue, Buffer.from(JSON.stringify(payload)), {persistent: true});
+                        // channel.publish(rabbit.exchange, rabbit.key, Buffer.from(JSON.stringify(payload)));
                     } catch(e) {
                         log.error(e)
                     } finally {

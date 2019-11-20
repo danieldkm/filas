@@ -12,11 +12,19 @@ const prod = {
         strc: process.env.PROD_DB_STRC
     },
     aws: {
-        url: process.env.PROD_AWS_SQS_URL,
-        urlError: process.env.PROD_AWS_SQS_URL_ERROR,
-        secretKey: process.env.PROD_AWS_SQS_SECRETKEY,
-        accessKey: process.env.PROD_AWS_SQS_ACCESSKEY,
-        region: process.env.PROD_AWS_SQS_REGION
+        sqs: {
+            url: process.env.PROD_AWS_SQS_URL,
+            urlError: process.env.PROD_AWS_SQS_URL_ERROR,
+            secretKey: process.env.PROD_AWS_SQS_SECRETKEY,
+            accessKey: process.env.PROD_AWS_SQS_ACCESSKEY,
+            region: process.env.PROD_AWS_SQS_REGION
+        },
+        sns: {
+            topicArn: process.env.PROD_AWS_SNS_TOPIC_ARN,
+            secretKey: process.env.PROD_AWS_SNS_SECRETKEY,
+            accessKey: process.env.PROD_AWS_SNS_ACCESSKEY,
+            region: process.env.PROD_AWS_SNS_REGION
+        }
     },
     rabbit: {
         url: process.env.PROD_RABBITMQ_URL,
@@ -38,11 +46,19 @@ const dev = {
         strc: process.env.DEV_DB_STRC
     },
     aws: {
-        url: process.env.DEV_AWS_SQS_URL,
-        urlError: process.env.DEV_AWS_SQS_URL_ERROR,
-        secretKey: process.env.DEV_AWS_SQS_SECRETKEY,
-        accessKey: process.env.DEV_AWS_SQS_ACCESSKEY,
-        region: process.env.DEV_AWS_SQS_REGION
+        sqs: {
+            url: process.env.DEV_AWS_SQS_URL,
+            urlError: process.env.DEV_AWS_SQS_URL_ERROR,
+            secretKey: process.env.DEV_AWS_SQS_SECRETKEY,
+            accessKey: process.env.DEV_AWS_SQS_ACCESSKEY,
+            region: process.env.DEV_AWS_SQS_REGION
+        },
+        sns: {
+            topicArn: process.env.DEV_AWS_SNS_TOPIC_ARN,
+            secretKey: process.env.DEV_AWS_SNS_SECRETKEY,
+            accessKey: process.env.DEV_AWS_SNS_ACCESSKEY,
+            region: process.env.DEV_AWS_SNS_REGION
+        }
     },
     rabbit: {
         url: process.env.DEV_RABBITMQ_URL,
@@ -67,11 +83,19 @@ const stg = {
         strc: process.env.STAGE_DB_STRC
     },
     aws: {
-        url: process.env.STAGE_AWS_SQS_URL,
-        urlError: process.env.STAGE_AWS_SQS_URL_ERROR,
-        secretKey: process.env.STAGE_AWS_SQS_SECRETKEY,
-        accessKey: process.env.STAGE_AWS_SQS_ACCESSKEY,
-        region: process.env.STAGE_AWS_SQS_REGION
+        sqs: {
+            url: process.env.STAGE_AWS_SQS_URL,
+            urlError: process.env.STAGE_AWS_SQS_URL_ERROR,
+            secretKey: process.env.STAGE_AWS_SQS_SECRETKEY,
+            accessKey: process.env.STAGE_AWS_SQS_ACCESSKEY,
+            region: process.env.STAGE_AWS_SQS_REGION
+        },
+        sns: {
+            topicArn: process.env.STAGE_AWS_SNS_TOPIC_ARN,
+            secretKey: process.env.STAGE_AWS_SNS_SECRETKEY,
+            accessKey: process.env.STAGE_AWS_SNS_ACCESSKEY,
+            region: process.env.STAGE_AWS_SNS_REGION
+        }
     },
     rabbit: {
         url: process.env.STAGE_RABBITMQ_URL,

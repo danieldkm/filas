@@ -8,7 +8,9 @@
     "start": "NODE_ENV=dev node server.js",
     "rabbit-consumer": "NODE_ENV=dev node server.js rabbit-consumer",
     "rabbit-producer": "NODE_ENV=dev node server.js rabbit-producer",
-    "mongodb": "NODE_ENV=dev node server.js mongodb"
+    "mongodb": "NODE_ENV=dev node server.js mongodb",
+    "sns-list-topic": "NODE_ENV=dev node server.js sns-list-topic",
+    "sns-publish": "NODE_ENV=dev node server.js sns-publish"
   },
   "repository": {
     "type": "git",

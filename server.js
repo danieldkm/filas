@@ -8,16 +8,15 @@ const rbc = require('./components/rabbitmq/consumer')
 
 const connectMongo = require('./components/mongodb/connection')
 const Pontos = require('./components/mongodb/model')
-
-
+const sns = require('./components/aws/sns/sns')
 
 async function start () {
+
     if(process.argv[2] === 'rabbit-consumer') {
         rbc.consume()
     } else if(process.argv[2] === 'rabbit-producer') {
-        rbp.send({
-            teste: "teste2"
-        })
+        rbp.send( {type_event: 'PROVAEAD2'}
+        )
     } else if(process.argv[2] === 'mongodb') {
         const conn = await connectMongo.teste();
         // console.log(conn)
@@ -35,6 +34,10 @@ async function start () {
                 console.log('Mongoose connection disconnected');
             });
         }
+    } else if(process.argv[2] === 'sns-list-topic') {
+        sns.listTopic()
+    } else if(process.argv[2] === 'sns-publish') {
+        sns.publish({type_event: 'PROVAEAD'})
     }
     // await pool.init()
     // consumer.init()

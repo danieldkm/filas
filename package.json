@@ -9,6 +9,7 @@
     "rabbit-consumer": "NODE_ENV=dev node server.js rabbit-consumer",
     "rabbit-producer": "NODE_ENV=dev node server.js rabbit-producer",
     "mongodb": "NODE_ENV=dev node server.js mongodb",
+    "mongodb-deleta-all": "NODE_ENV=dev node server.js mongodb-deleta-all",
     "sns-list-topic": "NODE_ENV=dev node server.js sns-list-topic",
     "sns-publish": "NODE_ENV=dev node server.js sns-publish"
   },

@@ -26,11 +26,15 @@ const prod = {
             region: process.env.PROD_AWS_SNS_REGION
         }
     },
-    rabbit: {
-        url: process.env.PROD_RABBITMQ_URL,
-        exchange: process.env.PROD_RABBITMQ_EXCHANGE,
-        queue: process.env.PROD_RABBITMQ_QUEUE,
-        key: process.env.PROD_RABBITMQ_KEY,
+    amqp: {
+        url: process.env.PROD_AMQP_URL,
+        host: process.env.PROD_AMQP_HOST,
+		port: process.env.PROD_AMQP_PORT,
+		username: process.env.PROD_AMQP_USER,
+		password: process.env.PROD_AMQP_PASS,
+        exchange: process.env.PROD_AMQP_EXCHANGE,
+        queue: process.env.PROD_AMQP_QUEUE,
+        key: process.env.PROD_AMQP_KEY,
     }
 };
 
@@ -60,11 +64,15 @@ const dev = {
             region: process.env.DEV_AWS_SNS_REGION
         }
     },
-    rabbit: {
-        url: process.env.DEV_RABBITMQ_URL,
-        exchange: process.env.DEV_RABBITMQ_EXCHANGE,
-        queue: process.env.DEV_RABBITMQ_QUEUE,
-        key: process.env.DEV_RABBITMQ_KEY,
+    amqp: {
+        url: process.env.DEV_AMQP_URL,
+        host: process.env.DEV_AMQP_HOST,
+		port: process.env.DEV_AMQP_PORT,
+		username: process.env.DEV_AMQP_USER,
+		password: process.env.DEV_AMQP_PASS,
+        exchange: process.env.DEV_AMQP_EXCHANGE,
+        queue: process.env.DEV_AMQP_QUEUE,
+        key: process.env.DEV_AMQP_KEY,
     },
     mongodb: {
         url: process.env.MONGO_CONNECTION,
@@ -97,11 +105,15 @@ const stg = {
             region: process.env.STAGE_AWS_SNS_REGION
         }
     },
-    rabbit: {
-        url: process.env.STAGE_RABBITMQ_URL,
-        exchange: process.env.STAGE_RABBITMQ_EXCHANGE,
-        queue: process.env.STAGE_RABBITMQ_QUEUE,
-        key: process.env.STAGE_RABBITMQ_KEY,
+    amqp: {
+        url: process.env.STAGE_AMQP_URL,
+        host: process.env.STAGE_AMQP_HOST,
+		port: process.env.STAGE_AMQP_PORT,
+		username: process.env.STAGE_AMQP_USER,
+		password: process.env.STAGE_AMQP_PASS,
+        exchange: process.env.STAGE_AMQP_EXCHANGE,
+        queue: process.env.STAGE_AMQP_QUEUE,
+        key: process.env.STAGE_AMQP_KEY,
     }
 };
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const { mongodb } = require('../../config/env')
 const log = require('log4js').getLogger()
 module.exports = {
-    teste: () => {
+    connect: () => {
         return new Promise(async (resolve, reject) => {
             try {   
                 

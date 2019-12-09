@@ -9,6 +9,7 @@ const rbc = require('./components/rabbitmq/consumer')
 const connectMongo = require('./components/mongodb/connection')
 const Pontos = require('./components/mongodb/model')
 const sns = require('./components/aws/sns/sns')
+const serviceMongo = require('./components/mongodb/service')
 
 async function start () {
 
@@ -18,7 +19,7 @@ async function start () {
         rbp.send( {type_event: 'PROVAEAD2'}
         )
     } else if(process.argv[2] === 'mongodb') {
-        const conn = await connectMongo.teste();
+        const conn = await connectMongo.connect();
         // console.log(conn)
         if(conn) {
             var pontos = await Pontos.find()
@@ -38,7 +39,10 @@ async function start () {
         sns.listTopic()
     } else if(process.argv[2] === 'sns-publish') {
         sns.publish({type_event: 'PROVAEAD'})
-    }
+    } else if(process.argv[2] === 'mongodb-deleta-all') {
+        const conn = await connectMongo.connect();
+        await serviceMongo.deletaAll()
+    } 
     // await pool.init()
     // consumer.init()
 } 

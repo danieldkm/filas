@@ -25,7 +25,7 @@
   "homepage": "https://github.com/danieldkm/filas#readme",
   "dependencies": {
     "amqplib": "^0.5.5",
-    "aws-sdk": "^2.574.0",
+    "aws-sdk": "^2.814.0",
     "dotenv": "^8.2.0",
     "log4js": "^6.0.0",
     "mongoose": "^5.7.11",
